@@ -1,0 +1,44 @@
+---
+
+---
+    <!-- Mobile Navigation Toggle -->
+<button class="nav-toggle" id="navToggle" aria-label="Toggle navigation">
+    <span aria-hidden="true" class="nav-toggle-icon"></span>
+    <span aria-hidden="true" class="nav-toggle-icon"></span>
+    <span aria-hidden="true" class="nav-toggle-icon"></span>
+</button>
+
+
+<style is:inline>
+    .nav-toggle {
+  display: none;
+  flex-direction: column;
+  background: none;
+  border: none;
+  cursor: pointer;
+  padding: 0.5rem;
+  z-index: 1001;
+}
+
+.nav-toggle-icon {
+  width: 25px;
+  height: 3px;
+  background-color: var(--primary-color);
+  margin: 3px 0;
+  transition: 0.3s;
+  border-radius: 2px;
+}
+
+.nav-toggle.active .nav-toggle-icon:nth-child(1) {
+  transform: rotate(-45deg) translate(-5px, 6px);
+}
+
+.nav-toggle.active .nav-toggle-icon:nth-child(2) {
+  opacity: 0;
+}
+
+.nav-toggle.active .nav-toggle-icon:nth-child(3) {
+  transform: rotate(45deg) translate(-5px, -6px);
+}
+</style>
+
